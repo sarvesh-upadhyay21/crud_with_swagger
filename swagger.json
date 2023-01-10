@@ -1,0 +1,124 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "API Documentation in Node.js Using Swagger",
+        "description": "User Restful webservice application",
+     "version": "1.0.0",
+        "contact": {
+          "name": "Sarvesh Upadhyay",
+          "email": "sarvesh@web.com",
+          "url": "http://localhost:2023/api-docs"
+        }
+    },
+    "host": "localhost:2023/api",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "Users",
+        "description": "API for users"
+      }
+    ],
+    "produces": ["application/json"],
+    "paths": {
+      "/users": {
+
+        "post": {
+            "tags": ["Users"],
+            "summary": "create users",
+            "responses": {
+              "200": {
+                "description": "ok"
+              }
+            }
+          },
+
+        "get": {
+          "tags": ["Users"],
+          "summary": "Get all users",
+          "responses": {
+            "200": {
+              "description": "ok"
+            }
+          }
+        }
+      },
+
+      "/getById/{id}": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Id of the user which is to be searched",
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "get": {
+          "tags": ["Users"],
+          "summary": "Get user by id",
+          "responses": {
+            "200": {
+              "description": "ok"
+            },
+            "404": {
+              "description": "not found"
+            }
+          }
+        }
+      },
+
+      "/update": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "description": "Id of the user which is to be searched",
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "update": {
+          "tags": ["Users"],
+          "summary": "Get user by id",
+          "responses": {
+            "200": {
+              "description": "ok"
+            },
+            "404": {
+              "description": "not found"
+            }
+          }
+        }
+      },
+
+      "/deleteById": {
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "description": "Id of the user which is to be searched",
+            "type": "string"
+          }
+        ],
+        "produces": ["application/json"],
+        "delete": {
+          "tags": ["Users"],
+          "summary": "Get user by id",
+          "responses": {
+            "200": {
+              "description": "ok"
+            },
+            "404": {
+              "description": "not found"
+            }
+          }
+        }
+      }
+      
+    }
+      
+      
+  }

@@ -1,0 +1,11 @@
+
+// Paginaction Get All the Data;
+e.g; http://localhost:2023/api/users?page=2&limit=4
+
+// Filter with Page and limit METHOD GET
+ e.g; http://localhost:2023/api/get?pageNumber=5&pageSize=5
+
+// sorting GET Method all data
+e.g; http://localhost:2023/api?userName=dev&companyName=kaspro
+
+// User Delete by id method
